@@ -48,7 +48,63 @@ except:
     print('dinh dang dau vao khong hop le!')
 
 # Bài tập thứ 6
-
+# làm tròn đến n chữ số 
 giaTriA = float(input())
 giaTriB = int(input())
-print('{0:.{1}f}'.format(giaTriA,giaTriB))
+print('Dùng format: {0:.{1}f}'.format(giaTriA,giaTriB))
+
+# nó chỉ làm tròn để chữ số mà nó có
+formatNum = round(giaTriA,giaTriB)
+print('Dùng round: ', formatNum)
+
+# bài tập 7
+# Cách 1:
+gtA = input()
+gtB = input()
+try:
+    soThapPhanA = float(gtA)
+    soThapPhanB = int(gtB)
+    print('Dùng format: {0:.{1}f}'.format(soThapPhanA,soThapPhanB))
+except:
+    print('dinh dang dau vao khong hop le!')
+
+# Cách 2: (đỡ tốn tài nguyên hơn)
+gtA2 = input()
+gtB2 = input()
+flag = False
+try:
+    soThapPhanA2 = float(gtA2)
+    soThapPhanB2 = int(gtB2)
+    flag = True
+except:
+    print('dinh dang dau vao khong hop le!')
+
+if flag:
+    print('Dùng format: {0:.{1}f}'.format(soThapPhanA2,soThapPhanB2))
+
+
+# Bài 8:
+
+my_list=input().split()
+
+my_list=[int(x) for x in my_list]
+
+print(sum(my_list))
+
+#Nhap dong du lieu chua day gia tri tu ban phim
+dayGiaTri = input()
+
+#Su dung ham split() de cat day gia tri thanh cac chuoi con
+danhSachGiaTri = dayGiaTri.split()
+
+#Su dung ham map() de thuc hien viec chuyen cac chuoi con sang kieu so nguyen
+danhSachSo = map(int, danhSachGiaTri)
+
+#Su dung ham sum() de tinh tong day so
+tongDaySo = sum(danhSachSo)
+
+#In ket qua ra man hinh
+print(tongDaySo)
+
+
+
