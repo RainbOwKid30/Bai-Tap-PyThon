@@ -106,5 +106,33 @@ tongDaySo = sum(danhSachSo)
 #In ket qua ra man hinh
 print(tongDaySo)
 
+daySN = input()
+
+# bài 9
+try:
+    my_list = daySN.split()
+    my_list=[int(x) for x in my_list]
+    print("Tong cac so co trong day so: ",sum(my_list))
+except:
+    print("dinh dang dau vao khong hop le!")
+
+# bài 10
+
+with open('bai1.10.inp', 'r') as FileInp:
+
+    ten = FileInp.readline().rstrip('\n')
+    tuoiHienTai = int(FileInp.readline())
+
+with open('bai1.10.out','w') as FileOut:
+    FileOut.write(u'Vao 20 nam nua, tuoi cua {} se la {}'.format(ten, tuoiHienTai + 20))
+
+
+with open('test1.inp', 'r+') as FileInp:
+
+    ten = FileInp.readline().rstrip('\n')
+    tuoiHienTai = int(FileInp.readline())
+
+with open('test1.out','w+') as FileOut:
+    FileOut.write(u'Vao 20 nam nua, tuoi cua {} se la {}'.format(ten, tuoiHienTai + 20))
 
 

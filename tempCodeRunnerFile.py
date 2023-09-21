@@ -1,5 +1,7 @@
-my_list=input().split()
+with open('test2.inp', 'w') as FileInp:
 
-my_list=[int(x) for x in my_list]
+    ten = FileInp.rstrip('\n')
+    tuoiHienTai = int(FileInp.readline())
 
-print(sum(my_list))
+with open('test2.out','r') as FileOut:
+    FileOut.write(u'Vao 20 nam nua, tuoi cua {} se la {}'.format(ten, tuoiHienTai + 20))
